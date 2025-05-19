@@ -1,0 +1,25 @@
+{
+  "name": "html-to-pdf",
+  "version": "1.0.0",
+  "description": "Function to take input arguments and print the page to pdf",
+  "main": "index.mjs",
+  "scripts": {
+    "build": "npx playwright install --with-deps chromium",
+    "start": "node index.mjs",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/robdann/html-to-pdf.git"
+  },
+  "author": "Robert Dann",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/robdann/html-to-pdf/issues"
+  },
+  "homepage": "https://github.com/robdann/html-to-pdf#readme",
+  "dependencies": {
+    "express": "^5.1.0",
+    "playwright-core": "^1.52.0"
+  }
+}
