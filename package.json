@@ -20,6 +20,7 @@
   "homepage": "https://github.com/robdann/html-to-pdf#readme",
   "dependencies": {
     "express": "^5.1.0",
+    "morgan": "^1.10.1",
     "playwright-core": "^1.52.0"
   }
 }
