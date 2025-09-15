@@ -12,12 +12,18 @@ app.post('/', async (req, res) => {
     });
     try {
         const page = await browser.newPage();
+        console.log("html-to-pdf", url);
         await page.goto(url);
+        console.log("html-to-pdf", 'waitForLoadState', 'networkidle');
+        await page.waitForLoadState('networkidle', {timeout: 10000});
+        console.log("html-to-pdf", 'pdf');
         const buffer = await page.pdf({displayHeaderFooter: false});
         res.set('Content-Type', 'application/pdf');
+        res.set('Content-Length', `${buffer.length}`);
+        console.log("html-to-pdf", 'send');
         res.send(buffer);
     } catch (e) {
-        res.status(500).send({error: e});
+        res.status(500).send({error: e.message});
     } finally {
         await browser.close();
     }

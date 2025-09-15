@@ -2,5 +2,5 @@ POST http://localhost:8080
 Content-Type: application/json
 
 {
-  "url": "https://www.google.co.uk"
+  "url": "https://afyaca-production.up.railway.app/api/admin/appointments/1537543543/invoice.pdf?token=eyJhbGciOiJkaXIiLCJlbmMiOiJBMjU2R0NNIiwiaXNzIjoiaHR0cHM6Ly9kb2MtMi1nby5ldS5hdXRoMC5jb20vIn0..SIeyyf6MBAgEkOsW.KIk1mCbVLxlUZbFMQ7xyoGhkkE4ytfNGjIMZbfkH5ZhuxHLTW_hZuGmgjpJG-NkHMoyHe34rbNQ2ExHnfWOT2KQkX6D6Yz9jO-3Yq7xtqt4iF-xBSCa6GEADqEu5NWH35aduD_2PIqIozK14LRrREXMh8o2qIYbf_GjQNmKvMrReT-q_AIAxFoFczVtJ68ABTHDN1o9TsqT0_YWN4h77WOGla7mKBN68yCCtRMRmpfz97bx31B4s6Jdytz8sE87enPDsWaYJtDt2zuyomTcOCORB62gMP4_Dm_SttehaXle5uA.thql37GUiS5kksoj4NpzfQ"
 }
