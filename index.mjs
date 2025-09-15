@@ -31,6 +31,8 @@ app.post('/', async (req, res) => {
         console.log("html-to-pdf", 'send');
         res.send(buffer);
     } catch (e) {
+        console.log(e);
+        console.log(e.stack);
         res.status(500).send({error: e.message});
     } finally {
         await browser.close();
