@@ -7,6 +7,14 @@ app.use(morgan('combined'));
 app.use(express.json());
 app.post('/', async (req, res) => {
     const {url} = req.body;
+
+    const html = await fetch(url);
+    if (!html.ok) {
+        console.warn(`Could not find html from ${url}`);
+        res.status(400);
+        return;
+    }
+
     const browser = await chromium.launch({
         headless: true
     });
