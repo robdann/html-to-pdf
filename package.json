@@ -4,7 +4,7 @@
   "description": "Function to take input arguments and print the page to pdf",
   "main": "index.mjs",
   "scripts": {
-    "build": "npx playwright install --with-deps chromium",
+    "build": "npx playwright-core install --with-deps chromium",
     "start": "node index.mjs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

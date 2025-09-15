@@ -3,7 +3,7 @@ import {chromium} from "playwright-core";
 import morgan from "morgan";
 
 const app = express();
-app.use(morgan());
+app.use(morgan('combined'));
 app.use(express.json());
 app.post('/', async (req, res) => {
     const {url} = req.body;
