@@ -39,6 +39,10 @@ app.post('/', async (req, res) => {
     }
 })
 
-app.listen(process.env.PORT || 8080, () => {
+app.listen(process.env.PORT || 8080, async () => {
     console.log("html-to-pdf listening for inputs!");
+
+    const response = await fetch('http://afyaca-server.railway.internal:8080');
+    console.log(response.statusText);
+
 });
