@@ -27,7 +27,7 @@ app.post('/', async (req, res) => {
                 await page.goto(url);
                 console.log("html-to-pdf", 'waitForLoadState', 'networkidle');
                 await page.waitForLoadState('networkidle', {timeout: 10000});
-                console.log("html-to-pdf", 'pdf');
+                console.log("html-to-pdf", await page.content());
                 const buffer = await page.pdf({displayHeaderFooter: false});
                 res.set('Content-Type', 'application/pdf');
                 res.set('Content-Length', `${buffer.length}`);
