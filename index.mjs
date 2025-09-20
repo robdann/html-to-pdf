@@ -5,7 +5,9 @@ import morgan from "morgan";
 const app = express();
 app.use(morgan('combined'));
 app.use(express.json());
-app.use(express.text());
+app.use(express.text({
+    type: 'text/html',
+}));
 app.use(express.raw());
 
 app.post('/', async (req, res) => {
@@ -27,7 +29,7 @@ app.post('/', async (req, res) => {
                 await page.goto(url);
                 console.log("html-to-pdf", 'waitForLoadState', 'networkidle');
                 await page.waitForLoadState('networkidle', {timeout: 10000});
-                console.log("html-to-pdf", await page.content());
+                console.log("html-to-pdf", 'pdf');
                 const buffer = await page.pdf({displayHeaderFooter: false});
                 res.set('Content-Type', 'application/pdf');
                 res.set('Content-Length', `${buffer.length}`);

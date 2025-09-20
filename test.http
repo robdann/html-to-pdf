@@ -3,7 +3,7 @@ Content-Type: text/html
 
 <html>
 <body>
-<h1>Hello</h1>
-<p>THIS IS SOME TEXT</p>
+    <h1>Hello</h1>
+    <p>THIS IS SOME TEXT</p>
 </body>
 </html>
